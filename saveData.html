@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>IOT SOUND MONITOR</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-database.js"></script>
+    <script src="http://bernii.github.io/gauge.js/dist/gauge.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script src='https://cdn.plot.ly/plotly-latest.min.js'></script> 
+    <link rel="stylesheet" href="styles.css">
+    
+   
+</head>
+
+<body onload="onLoadFirebase()">
+    <h2>PATIENT BED DASHBOARD</h2>
+    
+    <div class="botControl" style="margin-top: 40px; margin-bottom: 40px">
+        <button id="deliver">DELIVER GOODS</button>
+        <button id="send">SEND BOT</button>
+        <button id="return">RETURN BOT</button>
+    </div>
+    
+    <div class="content">
+        <div style="width:45%; float: left; padding: 2px; border: solid black 1px; padding: 2px">
+         <form id="form">
+          <input type="text" id="med" placeholder="MEDICINE NAME"><br>
+          <input type="text" id="dose" placeholder="DOSAGE"><br>
+          <input type="time" id="clockTime" placeholder="TIME"><br><br>
+         
+          <input type="radio" id="before_meal" name="meal" checked="checked" value="Before meal">
+          <label for="before_meal">BEFORE MEAL</label><br>
+
+          <input type="radio" id="after_meal" name="meal" value="After meal">
+          <label for="after_meal">AFTER MEAL</label><br>
+        	
+          <button id="but1">SUBMIT</button>
+        </form> 
+        </div>
+         
+    <div style="width:45%; float: right; padding: 2px; border: solid black 1px; padding: 2px">
+        <form id="form2">
+            <h2 id="slotDiplay"></h2>
+            <input type="text" id="slotSelect" placeholder="MEDICINE SLOT"><br>
+            <button id="slotSubmit">SUBMIT</button>
+        </form>
+    </div>
+    </div>
+
+   </br>
+    <h2>ASSIGNED MEDICINE LIST:</h2>
+<div class="container">
+    
+</div>
+  </br>
+   </br>
+    <h2>PATIENT VITALS CHART</h2>
+	<div class="top">
+            <div style="width:48%; float: left; padding: 2px; border: solid black 1px; margin-bottom: 100px">
+                <canvas id="chartOfHeartRate" width="400px" height="180px"></canvas>
+            </div>
+            <div style="width:48%; float: right; padding: 2px; border: solid black 1px; margin-bottom: 100px">
+                <canvas id="chartOfTemperature" width="400px" height="180px"></canvas>
+            </div>
+    </div>
+
+</body>
+<script src="saveData.js"></script>
+</html>
