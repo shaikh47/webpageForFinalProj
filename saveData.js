@@ -370,7 +370,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
   } else {
     // No user is signed in.
-	window.location='file:///C:/Users/shaikh/Desktop/web%20eng/nodemcu/working_but_do_test_only_here/finalYearProjectWebPage/login/index.html';
+	window.location='index.html';
 
   }
 });
