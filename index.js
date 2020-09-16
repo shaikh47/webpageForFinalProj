@@ -7,7 +7,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     if(user != null){
 
       var email_id = user.email;
-      window.location='file:///C:/Users/shaikh/Desktop/web%20eng/nodemcu/working_but_do_test_only_here/finalYearProjectWebPage/mainBedPage/mainBedPage.html';
+      window.location='mainBedPage.html';
     }
 
   } else {
