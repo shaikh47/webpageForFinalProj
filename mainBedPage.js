@@ -80,7 +80,7 @@ function gotData(data) { //this function retrieves the data from firebase
             //var res = id.split("_"); //btn_0 spliting in order to get the number only
             console.log(id); 
            localStorage.setItem('bedNumber',id);
-           window.location='file:///C:/Users/shaikh/Desktop/web%20eng/nodemcu/working_but_do_test_only_here/finalYearProjectWebPage/medicinePage/saveData.html?meal=Before+meal';
+           window.location='saveData.html';
         });
 
     });
@@ -109,7 +109,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
   } else {
     // No user is signed in.
-	window.location='file:///C:/Users/shaikh/Desktop/web%20eng/nodemcu/working_but_do_test_only_here/finalYearProjectWebPage/login/index.html';
+	window.location='index.html';
 
   }
 });
