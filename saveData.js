@@ -43,6 +43,7 @@ const btnSend = document.getElementById('send');
 const btnDeliver = document.getElementById('deliver');
 const btnReturn = document.getElementById('return');
 const btnSlotSubmit = document.getElementById('slotSubmit');
+const btnBackPage = document.getElementById('backPage');
 //foreign code
 document.getElementById("deliver").innerHTML = "COLLECT VITALS "+"("+site+")";
 document.getElementById("send").innerHTML = "SEND BOT "+"("+site+")";
@@ -219,6 +220,11 @@ btnReturn.addEventListener('click', (e) => { //alternate saving
     ref.set(data);
 });
 
+btnBackPage.addEventListener('click', (e) => { //alternate saving
+    e.preventDefault();
+    console.log("workingg");
+    window.location='mainBedPage.html';
+});
 
 btnSlotSubmit.addEventListener('click', (e) => { //alternate saving
     e.preventDefault();
