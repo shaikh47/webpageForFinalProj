@@ -15,6 +15,9 @@ h1{
     text-align: center;
 }
 
+h2{
+    text-decoration-color: #ffffff;
+}
 
 ul{
     list-style-type: none;
