@@ -16,6 +16,9 @@ h1{
 	color: #00ffe5;
 }
 
+h2{
+	text-decoration-color: #ffffff;	
+}
 
 ul{
     list-style-type: none;
